@@ -3,31 +3,20 @@ class Stack:
     def __init__(self, size):
         self.items = []
         self.size = size
-        self.top = -1
 
     def is_empty(self):
-        return self.top == -1
+        return len(self.items) == 0
 
     def is_full(self):
-        return self.top == self.size-1
+        return len(self.items) == size
 
     def push(self, data):
         if not self.is_full():
-            self.top+=1
-            a = int(input("Enter the data to be inserted : "))
-            self.items[self.top] = a
-        else:
-            print("The stack is full.")
-                    
+            self.items.append(values[1])
 
     def pop(self):
         if not self.is_empty():
-            b = self.items[self.top]
-            del self.items[self.top]
-            self.top-=1
-            return b
-        else:
-            print("The stack is empty.")
+            self.items.pop()
 
     def status(self):
         for i in self.items:
